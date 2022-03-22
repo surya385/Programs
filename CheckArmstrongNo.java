@@ -24,7 +24,8 @@ public class CheckArmstrongNo {
 		}
 	}
 
-	private int count(int givenNo) {
+	private int count(int givenNo) 
+	{
 
 		int count=0;
 		while(givenNo>0)
