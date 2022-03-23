@@ -13,6 +13,7 @@ public class CheckNeonNumber {
 		int squareOfGivenNo=0;
 		squareOfGivenNo+=Math.pow(givenNo,2);
 		int sumOfDigitsOfSquare=obj.sumOfDigitsOfSquare(squareOfGivenNo);
+		
 		if(givenNo==sumOfDigitsOfSquare)
 		{
 			System.out.println("Given number is neon number");
