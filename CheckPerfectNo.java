@@ -1,3 +1,5 @@
+/*perfect number, a positive integer that is equal to the sum of its proper divisors.*/
+
 package numberPrograms;
 
 import java.util.Scanner;
