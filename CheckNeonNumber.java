@@ -1,3 +1,5 @@
+/*sum of digits of its square is equal to the number itself is called a neon number.*/
+
 package numberPrograms;
 
 import java.util.Scanner;
