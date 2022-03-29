@@ -1,3 +1,5 @@
+/*A number is thought of as an Armstrong number if the sum of its own digits 
+raised to the power number of digits gives the number itself.*/
 package numberPrograms;
 import java.util.Scanner;
 public class CheckArmstrongNo {
