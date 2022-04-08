@@ -22,61 +22,42 @@ public class SecondMaxAndSecondMinValueOfArray {
 	}
 
 	private void secondMax(int[] number) {
-		int max=0;
+		int max =-2147483648;	//Minimum value for a variable of type int
+		int secondMax =-2147483648; 
 		for(int i=0;i<number.length;i++)
 		{
-			if(number[i]>max)
-			{
-				max=number[i];
-			}
+		if(number[i]>max){
+			secondMax = max;
+			max = number[i]; 
 		}
-		boolean secondMaxFound=false;
-		for(int secondMax=max-1;secondMax>=0;secondMax--)
+		else if(number[i]>secondMax&&number[i]!=max)
 		{
-			for(int i=0;i<number.length;i++)
-			{
-				if(secondMax==number[i])
-				{
-					System.out.println("Second maximum value: "+secondMax);
-					secondMaxFound=true;
-					break;
-				}
-			}
-			if(secondMaxFound==true)
-			{
-				break;
-			}
+		secondMax = number[i]; 
 		}
+		}
+		System.out.println("Maximum value:"+max);
+		System.out.println("Second maximum value: " +secondMax); 
 		
 				
 	}
 
 	private void secondMin(int[] number) {
-		int min=number[0];
-		for(int i=1;i<number.length;i++)
+
+		int min =2147483647;	//Maximum value for a variable of type int
+		int secondMin =2147483647; 
+		for(int i=0;i<number.length;i++)
 		{
-			if(number[i]<min)
-			{
-				min=number[i];
-			}
+		if(number[i]<min){
+			secondMin = min;
+			min = number[i]; 
 		}
-		boolean secondMinFound=false;
-		for(int secondMin=min+1;;secondMin++)
+		else if(number[i]<secondMin&&number[i]!=min)
 		{
-			for(int i=0;i<number.length;i++)
-			{
-				if(secondMin==number[i])
-				{
-					System.out.println("Second minimum value: "+secondMin);
-					secondMinFound=true;
-					break;
-				}
-			}
-			if(secondMinFound==true)
-			{
-				break;
-			}
+		secondMin = number[i]; 
 		}
+		}
+		System.out.println("Minimum value:"+min);
+		System.out.println("Second minimum value: "+secondMin); 
 	}
 	}
 
