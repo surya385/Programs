@@ -5,15 +5,15 @@ public class LeftTriangleStarPattern {
 	public static void main(String[] args) {
 		
 
-		for(int c=1;c<=10;c++) 
+		for(int row=1;row<=5;row++) 
 		{
-		for(int a=9;a>=c;a--)
+		for(int col=1;col<row;col++)
 		{
-			System.out.print(" ");
+			System.out.print("  ");
 		}
-		for(int b=1;b<=c;b++)
+		for(int col=row;col<=5;col++)
 		{
-			System.out.print("*");
+			System.out.print("* ");
 		}
 		System.out.println();
 		}
