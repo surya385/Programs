@@ -10,20 +10,19 @@ public class SecondMaxAndSecondMinValueOfArray {
 		Scanner s=new Scanner(System.in);
 		System.out.println("How many values do you want to compare");
 		int count=s.nextInt();
-		int number[]=new int[count];
+		long number[]=new long[count];
 		for(int i=0;i<count;i++)
 		{
-		System.out.println("Enter the number");
-		number[i]=s.nextInt();
+		number[i]=s.nextLong();
 		}
 		obj.secondMax(number);
 		obj.secondMin(number);
 		
 	}
 
-	private void secondMax(int[] number) {
-		int max =-2147483648;	//Minimum value for a variable of type int
-		int secondMax =-2147483648; 
+	private void secondMax(long[] number) {
+		long max =Long.MIN_VALUE;	
+		long secondMax =Long.MIN_VALUE; 
 		for(int i=0;i<number.length;i++)
 		{
 		if(number[i]>max){
@@ -41,10 +40,10 @@ public class SecondMaxAndSecondMinValueOfArray {
 				
 	}
 
-	private void secondMin(int[] number) {
+	private void secondMin(long[] number) {
 
-		int min =2147483647;	//Maximum value for a variable of type int
-		int secondMin =2147483647; 
+		long min =Long.MAX_VALUE;	
+		long secondMin =Long.MAX_VALUE; 
 		for(int i=0;i<number.length;i++)
 		{
 		if(number[i]<min){
