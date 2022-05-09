@@ -13,30 +13,26 @@ public class CheckStringEndsWith {
 		System.out.println("Enter the second string to check the first string ends with this string :");
 		String s2=s.nextLine();
 		s.close();
-		if(s2.length()>s1.length())
-		{
-			System.out.println("Second string has more letters comparing first string");
-		}
-		else
-		{
-		boolean stringStartsWith=obj.checkStartsWith(s1,s2);
-		if(stringStartsWith)
+		if(obj.checkEndsWith(s1,s2))
 			System.out.println(s1+" ends with "+s2);
 		else
 			System.out.println(s1+" not ends with "+s2);
-		}
 	}
 
-	private boolean checkStartsWith(String s1, String s2) {
+	public boolean checkEndsWith(String s1, String s2) {
 		
 		
+		if(s2.length()>s1.length())
+			return false;
+		else
+		{
 		for(int i=1;i<=s2.length();i++)
 		{
 			if(s1.charAt(s1.length()-i)!=s2.charAt(s2.length()-i))
 				return false;
 		}
 		return true;
-		
+		}
 		
 	}
 	
