@@ -12,30 +12,24 @@ public class CheckStringStartsWith {
 		String s1=s.nextLine();
 		System.out.println("Enter the second string to check the first string starts with this string :");
 		String s2=s.nextLine();
-		if(s2.length()>s1.length())
-		{
-			System.out.println("Second string has more letters comparing first string");
-		}
-		else
-		{
-		boolean stringStartsWith=obj.checkStartsWith(s1,s2);
-		if(stringStartsWith)
+		if(obj.checkStartsWith(s1,s2))
 			System.out.println(s1+" starts with "+s2);
 		else
 			System.out.println(s1+" not starts with "+s2);
-		}
 	}
 
-	private boolean checkStartsWith(String s1, String s2) {
-		
-		
+	public boolean checkStartsWith(String s1, String s2) {
+		if(s2.length()>s1.length())
+			return false;
+		else
+		{
 		for(int i=0;i<s2.length();i++)
 		{
 			if(s1.charAt(i)!=s2.charAt(i))
 				return false;
 		}
-		return true;
-		
+			return true;
+		}
 		
 	}
 }
